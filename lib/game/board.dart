@@ -5,14 +5,15 @@ import 'package:hexagon_chess/game/figures/pawn.dart';
 
 class Board extends Component {
   List<List<Cell>> cells = [];
-
+  Cell? focusedCell;
   @override
   Future<void>? onLoad() {
     for (var i = 0; i < 7; i++) {
       cells.add([]);
       for (var j = 0; j < 8 + i; j++) {
-        cells[i]
-            .add(Cell(positionOnTheBoard: Vector2(j.toDouble(), i.toDouble())));
+        cells[i].add(Cell(
+            positionOnTheBoard: Vector2(j.toDouble(), i.toDouble()),
+            board: this));
         add(cells[i][j]);
       }
     }
@@ -20,7 +21,8 @@ class Board extends Component {
       cells.add([]);
       for (var j = 0; j < 13 - i; j++) {
         cells[i + 7].add(Cell(
-            positionOnTheBoard: Vector2(j.toDouble(), (i + 7).toDouble())));
+            positionOnTheBoard: Vector2(j.toDouble(), (i + 7).toDouble()),
+            board: this));
         add(cells[i + 7][j]);
       }
     }

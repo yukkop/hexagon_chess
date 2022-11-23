@@ -8,7 +8,14 @@ class Rook extends Figure {
       : super(cell: cell, color: color);
 
   @override
+  copy({Cell? newCell}) {
+    return Rook(cell: cell, color: color);
+  }
+
+  @override
   List<Cell> getAvailableCells(Board board) {
+    //TODO realisation alghorithm
+
     return [];
   }
 }

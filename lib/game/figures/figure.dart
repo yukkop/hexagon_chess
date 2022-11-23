@@ -19,4 +19,5 @@ abstract class Figure extends SpriteComponent {
           position: position,
         );
   List<Cell> getAvailableCells(Board board);
+  Figure copy({Cell? newCell});
 }

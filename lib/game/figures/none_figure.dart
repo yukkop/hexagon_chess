@@ -12,6 +12,11 @@ class NoneFigure extends Figure {
         );
 
   @override
+  copy({Cell? newCell}) {
+    return NoneFigure(cell: cell);
+  }
+
+  @override
   List<Cell> getAvailableCells(Board board) {
     return [];
   }

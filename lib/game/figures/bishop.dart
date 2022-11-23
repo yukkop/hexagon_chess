@@ -8,7 +8,14 @@ class Bishop extends Figure {
       : super(cell: cell, color: color);
 
   @override
+  copy({Cell? newCell}) {
+    return Bishop(cell: cell, color: color);
+  }
+
+  @override
   List<Cell> getAvailableCells(Board board) {
+    //TODO realisation alghorithm
+
     return [];
   }
 }

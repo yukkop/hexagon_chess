@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flame/widgets.dart';
 
 import '../board.dart';
@@ -10,7 +12,14 @@ class King extends Figure {
       : super(cell: cell, color: color);
 
   @override
+  copy({Cell? newCell}) {
+    return King(cell: cell, color: color);
+  }
+
+  @override
   List<Cell> getAvailableCells(Board board) {
+    //TODO realisation alghorithm
+
     return [];
   }
 }
