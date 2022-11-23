@@ -37,6 +37,6 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GameWidget.controlled(gameFactory: Chess.new);
+    return const Center(child: GameWidget.controlled(gameFactory: Chess.new));
   }
 }
