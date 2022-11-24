@@ -14,10 +14,10 @@ abstract class Figure extends SpriteComponent {
       Vector2? size,
       Vector2? position})
       : super(
-          sprite: sprite,
-          size: size,
-          position: position,
-        );
+            sprite: sprite,
+            size: size,
+            position: position,
+            anchor: Anchor.center);
   List<Cell> getAvailableCells(Board board);
   Figure copy({Cell? newCell});
 }

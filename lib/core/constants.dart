@@ -1,6 +1,6 @@
 import 'package:flame/components.dart';
 
-const hexSize = 100.0;
-const hexSpriteSize = 97.0;
-Vector2 pawnsSize = Vector2(40.0, 52.0);
-Vector2 firstHexCoord = Vector2(450.0, 0);
+const hexSize = 50.0;
+const hexSpriteSize = 45.0;
+Vector2 pawnsSize = Vector2(0.4 * hexSize, 0.52 * hexSize);
+Vector2 firstHexCoord = Vector2(0.0, 0);

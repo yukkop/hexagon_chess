@@ -14,8 +14,7 @@ class Pawn extends Figure {
           cell: cell,
           color: color,
           size: pawnsSize,
-          position: Vector2(
-              hexSize / 2 - pawnsSize.x / 2, hexSize / 2 - pawnsSize.y / 2),
+          position: Vector2(hexSpriteSize / 2, hexSpriteSize / 2),
           sprite: color == GameColor.white
               ? Sprite(AssetsStore.whitePawnImage)
               : Sprite(AssetsStore.blackPawnImage),

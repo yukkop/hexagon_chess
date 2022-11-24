@@ -1,6 +1,7 @@
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 
+import 'core/constants.dart';
 import 'game/chess.dart';
 
 void main() {
@@ -37,6 +38,10 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: GameWidget.controlled(gameFactory: Chess.new));
+    return const Center(
+        child: SizedBox(
+            width: 15 * hexSize,
+            height: 13 * hexSize,
+            child: GameWidget.controlled(gameFactory: Chess.new)));
   }
 }

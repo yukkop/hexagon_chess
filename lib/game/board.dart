@@ -1,11 +1,17 @@
 import 'package:flame/components.dart';
+import 'package:hexagon_chess/core/constants.dart';
 import 'package:hexagon_chess/game/cell.dart';
 import 'package:hexagon_chess/game/chess.dart';
 import 'package:hexagon_chess/game/figures/pawn.dart';
 
-class Board extends Component {
+class Board extends PositionComponent {
   List<List<Cell>> cells = [];
   Cell? focusedCell;
+  Board()
+      : super(
+          anchor: Anchor.center,
+          position: Vector2(7 * hexSize / 2, 3 * hexSize / 2),
+        );
   @override
   Future<void>? onLoad() {
     for (var i = 0; i < 7; i++) {
